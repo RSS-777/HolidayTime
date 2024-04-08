@@ -1,0 +1,28 @@
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 768px;
+$breakpoint_sm: 480px;
+
+@mixin desktop {
+    @media (max-width: $breakpoint_xxl) {
+        @content;
+    }
+};
+
+@mixin laptop {
+    @media (max-width: $breakpoint_xl) {
+        @content;
+    }
+};
+
+@mixin table {
+    @media (max-width: $breakpoint_md) {
+        @content;
+    }
+};
+
+@mixin modile {
+    @media (max-width: $breakpoint_sm) {
+        @content;
+    }
+};

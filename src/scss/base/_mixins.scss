@@ -1,0 +1,12 @@
+@mixin fluid-size-text($min, $max) {
+    font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
+}
+
+@mixin fluid-img-width($min, $max) {
+    width: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
+}
+
+@mixin fluid-img-height($min, $max) {
+    height: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
+}
+

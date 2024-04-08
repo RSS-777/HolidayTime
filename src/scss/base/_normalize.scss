@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, figure, hr {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  ul, ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:focus {
+    outline: none;
+  }
+  
+  input, button, textarea, select {
+    box-sizing: border-box;
+  }
+
+  b, strong {
+    font-weight: bold;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
