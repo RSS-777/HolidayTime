@@ -4,13 +4,13 @@
 }
 
 .slick-prev {
-    top: 45%;
+    top: 50%;
     left: 0;
     transform: translateY(-50%);
 }
 
 .slick-next {
-    top: 45%;
+    top: 50%;
     right: 0;
     transform: translateY(-50%);
 }
@@ -19,7 +19,7 @@
 .slick-next:before {
     position: absolute;
     font-family: 'slick';
-    @include fluid-size-text(41, 85);
+    @include fluid-size-text(30, 85);
     line-height: 1;
     opacity: .75;
     color: var(--color-gray);
@@ -42,8 +42,8 @@
 .slick-dots li button {
     position: relative;
     z-index: 3;
-    width: 20px;
-    height: 20px;
+    @include fluid-img-width(10, 20);
+    @include fluid-img-height(10, 20);
     border-radius: 50%;
     margin-top: -35px;
     background-color: var(--color-background-nav-sl);
@@ -58,18 +58,4 @@
 
 .slick-dots li.slick-active button {
     background-color: var(--color-background-nav-sl-active);
-}
-
-@include table {
-    .slick-prev {
-        top: 25%;
-        left: 0;
-        transform: translateY(-50%);
-    }
-
-    .slick-next {
-        top: 25%;
-        right: 0;
-        transform: translateY(-50%);
-    }
 }

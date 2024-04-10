@@ -15,9 +15,15 @@
     }
 
     &__image {
-        width: 37px;
-        height: 20px;
         @include fluid-img-width (27, 37);
         @include fluid-img-height (10, 20)
+    }
+}
+
+@include laptop () {
+    .button {
+        padding: 7px 10px;
+        @include fluid-size-text(14, 24);
+        border-radius: 28px; 
     }
 }

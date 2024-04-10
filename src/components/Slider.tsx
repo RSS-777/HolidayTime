@@ -15,22 +15,22 @@ export const SimpleSlider: FC = () => {
     return (
         <Slider className="slider" {...settings}>
             <div>
-                <img src={forestImg} alt="Image building in the forest" />
+                <img className="slider__image" src={forestImg} alt="Image building in the forest" />
             </div>
             <div>
-                <img src={forestImg} alt="Image building in the forest" />
+                <img className="slider__image" src={forestImg} alt="Image building in the forest" />
             </div>
             <div>
-                <img src={forestImg} alt="Image building in the forest" />
+                <img className="slider__image" src={forestImg} alt="Image building in the forest" />
             </div>
             <div>
-                <img src={forestImg} alt="Image building in the forest" />
+                <img className="slider__image" src={forestImg} alt="Image building in the forest" />
             </div>
             <div>
-                <img src={forestImg} alt="Image building in the forest" />
+                <img className="slider__image" src={forestImg} alt="Image building in the forest" />
             </div>
             <div>
-                <img src={forestImg} alt="Image building in the forest" />
+                <img className="slider__image" src={forestImg} alt="Image building in the forest" />
             </div>
         </Slider>
     );

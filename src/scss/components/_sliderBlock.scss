@@ -1,6 +1,6 @@
-.slider {
+.slider-block {
     position: relative;
-    min-height: 354px;
+    height: fit-content;
     margin-top: 53px;
 
     &__text {
@@ -15,7 +15,7 @@
         min-height: 167px;
         overflow: visible;
         font-family: var(--font-family-PTSans-reg-it);
-        @include fluid-size-text(16, 24);
+        @include fluid-size-text(14, 24);
         color: var(--color-primary);
     }
 
@@ -26,33 +26,31 @@
     }
 }
 
-@include laptop {
-    .slider {
-        min-height: 384px;
-
-        &__text {
-            min-height: 187px;
-        }
-
+@include desktop {
+    .slider-block {
         &__button {
             top: 0;
+            right: 10px;
+        }
+    }
+}
+@include laptop {
+    .slider-block {
+        &__text {
+            min-height: 127px;
         }
     }
 }
 
 @include table {
-    .slider {
-        min-height: 328px;
-
+    .slider-block{
+       height: inherit;
+  
         &__text {
+            position: relative;
             padding: 16px;
             padding-top: 40px;
             padding-bottom: 40px;
-        }
-
-        &__button {
-            top: -20px;
-            right: 5px;
         }
     }
 }
