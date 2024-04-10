@@ -1,0 +1,39 @@
+.relax {
+    display: flex;
+    gap: 18px;
+    padding: 31px 70px 32px;
+    margin-top: 49px;
+    background-color: var(--color-gray);
+
+    &__image {
+        width: 50%;
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-family: var(--font-family-PTSans-reg);
+        @include fluid-size-text(14, 26);
+        padding: 34px 26px;
+        background-color: var(--color-background-text);
+        color: var(--color-primary);
+    }
+}
+
+@include table {
+    .relax {
+        flex-direction: column;
+        align-items: center;
+        padding: 31px 20px 32px;
+
+        &__image {
+            width: 100%;
+        }
+    
+        &__text {
+            @include fluid-size-text(16, 26);
+            padding: 24px 16px;
+        }
+    }
+}

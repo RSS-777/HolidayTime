@@ -1,0 +1,23 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    padding: 17px 15px;
+    font-family: var(--font-family-PTSans-reg);
+    @include fluid-size-text(14, 24);
+    text-align: center;
+    border-radius: 38px;
+
+    &__text {
+        margin: 0 10px;
+        color: var(--color-white);
+    }
+
+    &__image {
+        width: 37px;
+        height: 20px;
+        @include fluid-img-width (27, 37);
+        @include fluid-img-height (10, 20)
+    }
+}

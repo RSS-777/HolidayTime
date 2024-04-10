@@ -1,0 +1,75 @@
+.slick-prev,
+.slick-next {
+    z-index: 1;
+}
+
+.slick-prev {
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.slick-next {
+    top: 45%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.slick-prev:before,
+.slick-next:before {
+    position: absolute;
+    font-family: 'slick';
+    @include fluid-size-text(41, 85);
+    line-height: 1;
+    opacity: .75;
+    color: var(--color-gray);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-next:before {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.slick-prev:before {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.slick-dots li button {
+    position: relative;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: -35px;
+    background-color: var(--color-background-nav-sl);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slick-dots li button::before {
+  content: '';
+}
+
+.slick-dots li.slick-active button {
+    background-color: var(--color-background-nav-sl-active);
+}
+
+@include table {
+    .slick-prev {
+        top: 25%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .slick-next {
+        top: 25%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+}

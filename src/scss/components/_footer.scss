@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    padding-left: 5vw;
+    background-color: var(--color-primary);
+    margin-top: 10px;
+
+    &__text {
+        color: var(--color-white-footer);
+        font-family: var(--font-family-PTSans-reg-it);
+        @include fluid-size-text(12, 36);
+        line-height: 47px;
+        letter-spacing: 0%;
+    }
+}

@@ -10,3 +10,7 @@
     height: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
 }
 
+// @mixin fluid-img-background($min, $max) {
+//     background-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
+// }
+

@@ -233,10 +233,10 @@
     .navigation {
 
         &__logo {
-            @include fluid-img-width(120, 178.45);
+            @include fluid-img-width(80, 178.45);
             position: absolute;
-            top: 24px;
-            z-index: 2;
+            top: 30px;
+            z-index: 3;
         }
 
         &__lintel {
@@ -245,6 +245,7 @@
 
         &__links {
             position: absolute;
+            z-index: 2;
             top: -300px;
             flex-direction: column;
             width: 100%;
@@ -266,6 +267,7 @@
 
         &__burger-menu {
             display: block;
+            z-index: 3;
         }
     }
 

@@ -1,0 +1,24 @@
+.titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url("/images/home/mountains.svg");
+    background-position: 50%;
+    background-size: cover;
+    height: 369px;
+    margin: 53px auto 0;
+
+    &__title {
+        color: var(--color-white);
+        font-family: var(--font-family-PTSans-bold);
+        @include fluid-size-text(38, 64);
+    }
+
+    &__text {
+        color: var(--color-white);
+        font-family: var(--font-family-PTSans-bold);
+        @include fluid-size-text(13, 38);
+    }
+}

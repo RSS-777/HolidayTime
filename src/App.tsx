@@ -1,11 +1,23 @@
-import './scss/main.scss';
+import { FC } from 'react';
 import { Navigation } from './components/Navigation';
+import { Footer } from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import './scss/main.scss';
 
-function App() {
+const App: FC = () => {
   return (
-    <div>
+    <>
+    <header>
       <Navigation />
-    </div>
+    </header>
+    <main>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </main>
+    <Footer />
+    </>
   )
 }
 

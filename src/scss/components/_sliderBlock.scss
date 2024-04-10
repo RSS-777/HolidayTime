@@ -1,0 +1,58 @@
+.slider {
+    position: relative;
+    min-height: 354px;
+    margin-top: 53px;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        padding: 26px;
+        background-color: rgba(255, 255, 255, 0.8);
+        max-width: 1112px;
+        min-height: 167px;
+        overflow: visible;
+        font-family: var(--font-family-PTSans-reg-it);
+        @include fluid-size-text(16, 24);
+        color: var(--color-primary);
+    }
+
+    &__button {
+        position: absolute;
+        top: -34px;
+        right: 0;
+    }
+}
+
+@include laptop {
+    .slider {
+        min-height: 384px;
+
+        &__text {
+            min-height: 187px;
+        }
+
+        &__button {
+            top: 0;
+        }
+    }
+}
+
+@include table {
+    .slider {
+        min-height: 328px;
+
+        &__text {
+            padding: 16px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        &__button {
+            top: -20px;
+            right: 5px;
+        }
+    }
+}
