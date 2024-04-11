@@ -1,4 +1,4 @@
-@import './base/normalize', './base/extends', './base/fonts', './base/globals', './base/mixins', './base/variables', './base/media';
+@import './base/normalize', './base/fonts', './base/mixins', './base/variables', './base/media', './base/extends', './base/globals';
 @import './components/container';
 @import './components/navigation';
 @import './components/footer';
@@ -8,3 +8,4 @@
 @import './components/titles';
 @import './components/sliderBlock';
 @import './components/relax';
+@import './components/feedback';

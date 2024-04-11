@@ -1,4 +1,28 @@
 .section1 {
+    position: relative;
     max-width: 1485px;
     margin: 0 auto;
+
+    &__anchor {
+        position: absolute;
+        top: -150px;
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 252px;
+        right: 55px;
+        @include fluid-img-width(51, 101)
+    }
+}
+
+@include table {
+    .section1 {
+        &__link {
+            position: absolute;
+            bottom: 182px;
+            right: 25px;
+            @include fluid-img-width(31, 101)
+        }
+    }
 }

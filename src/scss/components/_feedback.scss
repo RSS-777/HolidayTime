@@ -1,0 +1,65 @@
+.feedback {
+    max-width: 518px;
+    margin: 49px auto 0;
+    border: 3px solid var(--color-gray);
+    background-color: var(--background-form);
+
+    &__title {
+        text-align: center;
+        color: var(--color-black-text);
+        @include fluid-size-text(22, 36);
+        line-height: 47px;
+        margin-top: 21px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 55px;
+        margin: 0 auto 36px;
+    }
+
+    &__label {
+        color: var(--color-black-text2);
+        @include fluid-size-text(16, 30);
+        line-height: 39px;
+        letter-spacing: 0%;
+        padding: 16px 0;
+    }
+
+    &__input {
+        padding: 18px 28px;
+    }
+
+    &__button {
+        text-align: center;
+        width: 100%;
+        height: 104px;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        @include fluid-size-text(22, 36);
+        line-height: 47px;
+        letter-spacing: 0%;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+        color: var(--color-gray);
+    }
+}
+
+@include modile {
+    .feedback {
+        &__content {
+            padding: 0 25px;
+        }
+
+        &__label {
+            line-height: 16px;
+        }
+
+        &__button {
+            height: 84px;
+        }
+    }
+}

@@ -46,7 +46,7 @@
     @include fluid-img-height(10, 20);
     border-radius: 50%;
     margin-top: -35px;
-    background-color: var(--color-background-nav-sl);
+    background-color: var(--background-nav-sl);
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -57,5 +57,5 @@
 }
 
 .slick-dots li.slick-active button {
-    background-color: var(--color-background-nav-sl-active);
+    background-color: var(--background-nav-sl-active);
 }
