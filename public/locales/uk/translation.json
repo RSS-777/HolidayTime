@@ -1,0 +1,10 @@
+{
+    "navigation" : {
+        "main": "головна",
+        "about us": "про нас",
+        "reserve": "забронювати",
+        "contacts": "контакти",
+        "personal": "особистий",
+        "office": "кабінет"
+    }
+}

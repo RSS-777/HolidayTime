@@ -1,0 +1,10 @@
+{
+    "navigation" : {
+        "main": "main",
+        "about us": "about us",
+        "reserve": "reserve",
+        "contacts": "contacts",
+        "personal": "personal",
+        "office": "office"
+    }
+}

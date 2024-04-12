@@ -2,12 +2,10 @@ import { ChangeEvent, FC, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import group from '../assets/images/navigation/Group.png';
 import logo from '../assets/images/navigation/logo.png';
-import { setLanguage } from "../store/languageSlice";
-import { TypeAppDispatch, TypeRootState } from "../store/store";
-import { useDispatch, useSelector } from "react-redux";
 import Select, { SingleValue } from 'react-select';
 import { Container } from "./Container";
-
+import {useTranslation} from "react-i18next";
+ 
 type TypeOption = {
     value: string,
     label: string,
@@ -20,10 +18,9 @@ const options: TypeOption[] = [
 ];
 
 export const Navigation: FC = () => {
-    const selectedLanguage = useSelector((state: TypeRootState) => state.languages.language);
-    const dispatch = useDispatch<TypeAppDispatch>();
-    const [openMenu, setOpenMenu] = useState<boolean>(false)
-    const [smallScreen, setSmallScreen] = useState<number>(1920)
+    const [openMenu, setOpenMenu] = useState<boolean>(false);
+    const [smallScreen, setSmallScreen] = useState<number>(1920);
+    const { t, i18n } = useTranslation();
   
     useEffect(() => {
         const handleScreen = () => {
@@ -39,7 +36,7 @@ export const Navigation: FC = () => {
 
     const handleLanguageChange = (selectedOption: SingleValue<TypeOption>) => {
         if (selectedOption) {
-            dispatch(setLanguage(selectedOption.value))
+            i18n.changeLanguage(selectedOption.value.toLowerCase())
         }
     }
 
@@ -58,33 +55,32 @@ export const Navigation: FC = () => {
                     <img src={logo} alt="image logo" />
                 </div>
                 <div className={`navigation__links ${openMenu ? 'open-menu' : ''}`}>
-                    <NavLink className='navigation__link' to='/'>Головна</NavLink>
+                    <NavLink className='navigation__link' to='/'>{t('navigation.main')}</NavLink>
                     <div className="navigation__lintel"></div>
-                    <NavLink className='navigation__link' to='/about'>Про нас</NavLink>
+                    <NavLink className='navigation__link' to='/about'>{t('navigation.about us')}</NavLink>
                     <div className="navigation__lintel"></div>
-                    <NavLink className='navigation__link' to='/reserve'>Забронювати</NavLink>
+                    <NavLink className='navigation__link' to='/reserve'>{t('navigation.reserve')}</NavLink>
                     <div className="navigation__lintel"></div>
-                    <NavLink className='navigation__link' to='/contacts'>Контакти</NavLink>
+                    <NavLink className='navigation__link' to='/contacts'>{t('navigation.contacts')}</NavLink>
                     <div className="navigation__lintel"></div>
-                    <NavLink className='navigation__link' to='/personal'>Особистий {smallScreen < 768 ? null : <br />} кабінет</NavLink>
+                    <NavLink className='navigation__link' to='/personal'>{t('navigation.personal')} {smallScreen < 768 ? null : <br />} {t('navigation.office')}</NavLink>
                     <div className="navigation__lintel"></div>
                     <div className='navigation__link navigation__link_flex'>
                         <img className='navigation__image-group' src={group} alt="Group Image" />
                         <Select
                             className="navigation__select"
                             classNamePrefix="navigation__select"
-                            value={options.find(option => option.value === selectedLanguage)}
+                            value={options.find(option => option.value.toLowerCase() === i18n.language)}
                             onChange={handleLanguageChange}
                             options={options}
                         />
                     </div>
                 </div>
                 <div className="navigation__burger-menu">
-                    <label className="navigation__label" htmlFor="check">
+                    <label className="navigation__label">
                         <input
                             className="navigation__input"
-                            type="checkbox" name=""
-                            id="check"
+                            type="checkbox" 
                             onChange={handleChekBox}
                         />
                         <span className="navigation__burger-span"></span>
