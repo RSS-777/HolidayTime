@@ -29,7 +29,7 @@
     &__link {
         flex-grow: 1;
         font-family: var(--font-family-PTSans-bold);
-        @include fluid-size-text(16, 24);
+        @include fluid-size-text(14, 24);
         line-height: 31px;
         text-transform: uppercase;
         text-align: center;
@@ -63,10 +63,12 @@
         border: none !important;
         flex-grow: 1;
         font-family: var(--font-family-PTSans-bold);
-        @include fluid-size-text(16, 28);
+        @include fluid-size-text(14, 28);
         line-height: 36px;
         letter-spacing: 0%;
         color: var(--color-white);
+        max-width: 60px;
+        margin-left: 15px;
 
         .css-13cymwt-control {
             background-color: transparent;
@@ -97,7 +99,7 @@
 
         &__menu-list {
             background-color: var(--color-primary);
-
+           
             .navigation__select__option--is-focused {
                 background-color: var(--color-gray);
             }

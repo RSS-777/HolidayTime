@@ -2,15 +2,18 @@ import { FC } from "react";
 import { SimpleSlider } from '../components/Slider';
 import { Button } from '../components/Button';
 import arrowRight from '../assets/images/home/Arrow right.png';
+import { useTranslation } from "react-i18next";
 
 export const SliderBlock: FC = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="slider-block">
             <SimpleSlider />
             <div className="slider-block__text">
-                Полонини Карпат, у селі Орів посеред гір розташувався затишний куточок для незабутніх вражень. Справжні українські гори, власноручне сироваріння на полонині, водоспади та вікові дерева чекають на Вас.
+                { t("slider.text") }
                 <div className="slider-block__button">
-                    <Button name='Переглянути' image={arrowRight} />
+                    <Button name={ t("slider.button")} image={arrowRight} />
                 </div>
             </div>
         </div>

@@ -6,5 +6,42 @@
         "contacts": "contacts",
         "personal": "personal",
         "office": "office"
+    },
+    "titles": {
+        "title": "An authentic vacation in the midst of Ukrainian color!"
+    },
+    "slider" : {
+        "text": "Polonyny Carpathians, in the village of Oriv in the middle of the mountains there is a cozy corner for unforgettable experiences. Real Ukrainian mountains, homemade cheese-making on polony, waterfalls and ancient trees are waiting for you.",
+        "button": "Review"
+    },
+    "relax" : {
+        "text": "Active recreation in unusual locations. Pristine nature and local flavor will give you unforgettable impressions."
+    },
+    "feedback": {
+        "title": "Feedback",
+        "name": "Name",
+        "name placeholder": "Enter a name",
+        "phone": "Phone number",
+        "phone placeholder": "Enter a phone number",
+        "button": "Request a challenge"
+    },
+    "contacts" : {
+        "title": "Contacts",
+        "phone": "Phone",
+        "number": "+380930000000",
+        "schedule": "Work schedule",
+        "schedule mon fri": "mon-fri 08:00 - 18:00", 
+        "schedule sat": "sat 09:00 - 17:00",
+        "schedule sun": "sun 10:00 - 14:00",
+        "email": "E. mail",
+        "email link": "hello@gmail.com",
+        "address": "Office address",
+        "address name": "Kyiv, st. Putunkevicha, building 10"
+    },
+    "about" : {
+        "title": "About us",
+        "image title": "HolidayTime",
+        "image text": "Rest, emotions, impressions, atypical routes, incredible locations - this is all about rural eco-tourism in Ukraine",
+        "text": "Our team has collected the most colorful places of our country just for you.\n\nThe mission of our company is to give unforgettable impressions and show Ukraine from a different side. Walk with you along the forest paths to eat fresh Carpathian cheese. Dive into the canyon and see the village of Bakota submerged under the layer of years. Take a ride on the gondolas in the 'Ukrainian Venice'.\n\nExplore Ukraine together!"
     }
 }

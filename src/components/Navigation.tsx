@@ -80,6 +80,7 @@ export const Navigation: FC = () => {
                     <label className="navigation__label">
                         <input
                             className="navigation__input"
+                            name="changeLanguage"
                             type="checkbox" 
                             onChange={handleChekBox}
                         />

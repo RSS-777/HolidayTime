@@ -1,0 +1,73 @@
+.about {
+    &__titles {
+      display: flex;
+      align-items: center;
+      background-color: var(--background-title);
+      height: 140px;
+    }
+
+    &__title {
+        color: var(--color-primary);
+        font-family: var(--font-family-PTSans-reg-it);
+        @include fluid-size-text(24, 48);
+        line-height: 62px;
+        margin-left: 12vw;
+    }
+
+    &__image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1575px;
+        @include fluid-img-height(180, 227);
+        margin: 23px auto 0;
+        background-image: url(../../../public/images/about/image_fone.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+        text-align: center;
+        padding: 0 132px;
+    }
+
+    &__image-title {
+        font-family: var(--font-family-PTSans-bold);
+        @include fluid-size-text(24, 48);
+        color: var(--color-white);
+    }
+
+    &__image-text {
+        font-family: var(--font-family-PTSans-bold-it);
+        @include fluid-size-text(16, 36);
+        color: var(--color-white);
+    }
+
+    &__content {
+        max-width: 1575px;
+        @include automatic-padding(24, 74, 24, 74);
+        margin: 23px auto 24px;
+        background-color: var(--background-text);
+    }
+
+    &__text {
+        @include fluid-size-text(16, 30);
+        color: var(--color-primary);
+        white-space: pre-line;
+    }
+}
+
+@include laptop {
+    .about {
+        &__image {
+            padding: 0 62px;
+        }
+    }
+}
+
+@include modile {
+    .about {
+        &__image {
+            padding: 0 22px;
+        }
+    }
+}
