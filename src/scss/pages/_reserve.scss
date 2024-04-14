@@ -1,0 +1,30 @@
+.reserve {
+
+    &__titles {
+        display: flex;
+        align-items: center;
+        background-color: var(--background-title);
+        height: 140px;
+    }
+
+    &__title {
+        color: var(--color-primary);
+        font-family: var(--font-family-PTSans-reg-it);
+        @include fluid-size-text(24, 48);
+        line-height: 62px;
+        margin-left: 12vw;
+    }
+
+    &__content {
+        max-width: 1489px;
+        padding: 0 10px;
+        margin: 0 auto 57px;
+    }
+
+    &__select {
+        margin: 22px 0 0;
+        text-align: center;
+        @include fluid-size-text(18, 28);
+        color: var(--color-black-text);
+    }
+}

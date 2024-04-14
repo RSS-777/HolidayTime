@@ -12,6 +12,7 @@ export const SimpleSlider: FC = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+    
     return (
         <Slider className="slider" {...settings}>
             <div>

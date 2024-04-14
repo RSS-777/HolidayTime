@@ -1,0 +1,115 @@
+.place {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    background-color: var(--background-block-place);
+    margin-top: 22px;
+    padding: 28px 0;
+    height: 300px;
+
+    &__images {
+        flex-shrink: 0;
+        max-width: 485px;
+        height: 239px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 712px;
+        height: 100%;
+        padding: 3px 28px;
+    }
+
+    &__title {
+        align-self: flex-start;
+        color: var(--color-primary-select);
+        font-family: var(--font-family-PTSans-bold-it);
+        @include fluid-size-text(22, 36);
+        line-height: 47px;
+    }
+
+    &__hr {
+        background-color: var(--background-text-place);
+        margin-bottom: 10px;
+        height: 3px;
+        width: 100%;
+    }
+
+    &__text {
+        font-family: var(--font-family-PTSans-reg);
+        @include fluid-size-text(16, 22);
+        text-align: center;
+        color: var(--color-primary);
+        background-color: var(--background-text-place);
+    }
+
+    &__label {
+        position: absolute;
+        top: 17px;
+        right: 17px;
+        @include fluid-img-width(25, 50);
+        @include fluid-img-height(25, 50);
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 10px;
+        right: -48px;
+    }
+}
+
+@include desktopL {
+    .place {
+        &__button {
+            right: 10px;
+        }
+    }
+}
+
+@include laptop {
+    .place {
+        height: 300px;
+    
+        &__images {
+            display: flex;
+            width: 40%;
+            height: 239px;
+        }
+    
+        &__content {
+            width: 60%;
+        }
+    
+    }
+}
+
+@include table {
+    .place {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 50px;
+    
+        &__images {
+            display: flex;
+            width: 90%;
+            height: auto;
+        }
+    
+        &__content {
+            width: 90%;
+            padding: 0;
+        }
+
+        &__text {
+            padding: 10px;
+        }
+    
+    }
+}

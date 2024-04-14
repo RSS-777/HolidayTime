@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import languageReducer from "./languageSlice";
+import placeReducer from "./placeSlice";
 
 export const store = configureStore({
     reducer: {
-        languages: languageReducer
+        languages: languageReducer,
+        places: placeReducer
     }
 });
 

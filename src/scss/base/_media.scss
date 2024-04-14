@@ -1,10 +1,17 @@
 $breakpoint_xxl: 1200px;
+$breakpoint_xll: 1600px;
 $breakpoint_xl: 1024px;
 $breakpoint_md: 768px;
 $breakpoint_sm: 480px;
 
 @mixin desktop {
     @media (max-width: $breakpoint_xxl) {
+        @content;
+    }
+};
+
+@mixin desktopL{
+    @media (max-width: $breakpoint_xll) {
         @content;
     }
 };

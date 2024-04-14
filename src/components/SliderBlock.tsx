@@ -11,9 +11,9 @@ export const SliderBlock: FC = () => {
         <div className="slider-block">
             <SimpleSlider />
             <div className="slider-block__text">
-                { t("slider.text") }
+                { t("home.slider.text") }
                 <div className="slider-block__button">
-                    <Button name={ t("slider.button")} image={arrowRight} />
+                    <Button name={ t("home.slider.button")} image={arrowRight} />
                 </div>
             </div>
         </div>

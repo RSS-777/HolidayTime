@@ -5,7 +5,7 @@ import logo from '../assets/images/navigation/logo.png';
 import Select, { SingleValue } from 'react-select';
 import { Container } from "./Container";
 import {useTranslation} from "react-i18next";
- 
+
 type TypeOption = {
     value: string,
     label: string,
@@ -21,7 +21,7 @@ export const Navigation: FC = () => {
     const [openMenu, setOpenMenu] = useState<boolean>(false);
     const [smallScreen, setSmallScreen] = useState<number>(1920);
     const { t, i18n } = useTranslation();
-  
+
     useEffect(() => {
         const handleScreen = () => {
             setSmallScreen(window.innerWidth)
