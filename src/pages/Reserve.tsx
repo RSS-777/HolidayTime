@@ -17,6 +17,8 @@ type TypeOption = {
     label: string
 };
 
+type TypeProps = (place: string, img: string) => void;
+
 const Reserve: FC = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
@@ -36,6 +38,10 @@ const Reserve: FC = () => {
         }
     }
 
+    const handleDetails: TypeProps = (place, img) => {
+        navigate('/details', { state: { place, img } });
+    }
+
     return (
         <Container>
             <div className="reserve">
@@ -50,32 +56,40 @@ const Reserve: FC = () => {
                         onChange={handleChoice}
                     />
                     <Place
+                        placeId="bacota"
                         src={imageBacota}
                         alt={'Image Bacota'}
                         title={t("reserve.place.bakota.title")}
                         text={t("reserve.place.bakota.text")}
                         buttonName={t("reserve.place.button")}
+                        onClick={() => handleDetails('bakota', imageBacota)}
                     />
                     <Place
+                        placeId="carpathians"
                         src={imageCarpathians}
                         alt={'Image Carpathians'}
                         title={t("reserve.place.carpathians.title")}
                         text={t("reserve.place.carpathians.text")}
                         buttonName={t("reserve.place.button")}
+                        onClick={() => handleDetails('carpathians', imageCarpathians)}
                     />
                     <Place
+                        placeId="kyiv"
                         src={imageKyiv}
                         alt={'Image Kyiv'}
                         title={t("reserve.place.kyiv.title")}
                         text={t("reserve.place.kyiv.text")}
                         buttonName={t("reserve.place.button")}
+                        onClick={() => handleDetails('kyiv', imageKyiv)}
                     />
                     <Place
+                        placeId="oddesa"
                         src={imageOddesa}
                         alt={'Image Oddesa'}
                         title={t("reserve.place.odessa.title")}
                         text={t("reserve.place.odessa.text")}
                         buttonName={t("reserve.place.button")}
+                        onClick={() => handleDetails('odessa', imageOddesa)}
                     />
                 </div>
             </div>

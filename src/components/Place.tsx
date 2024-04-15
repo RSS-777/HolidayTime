@@ -1,21 +1,27 @@
-import { ChangeEvent, FC, useState } from "react";
+import { ChangeEvent, FC, MouseEvent } from "react";
 import iconLike from '../assets/images/reserve/emojione_star.png';
 import iconLikeActive from '../assets/images/reserve/emojione_star_active.png';
 import { Button } from "./Button";
+import { useDispatch, useSelector } from "react-redux";
+import { TypeAppDispatch, TypeRootState } from "../store/store";
+import { setLike } from "../store/likeSlice";
 
 interface IProps {
+    placeId: string,
     src: string,
     alt: string,
     title: string,
     text: string,
-    buttonName: string
+    buttonName: string,
+    onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 };
 
-export const Place: FC<IProps> = ({ src, alt, title, text, buttonName }) => {
-    const [like, setLike] = useState<boolean>(false)
+export const Place: FC<IProps> = ({ placeId, src, alt, title, text, buttonName, onClick }) => {
+    const dispatch: TypeAppDispatch = useDispatch();
+    const like = useSelector((state: TypeRootState) => state.likeChoice[placeId]);
 
     const handleLike = (e: ChangeEvent<HTMLInputElement>) => {
-        setLike(e.target.checked);
+        dispatch(setLike({ placeId, value: e.target.checked }))
     }
 
     return (
@@ -25,7 +31,7 @@ export const Place: FC<IProps> = ({ src, alt, title, text, buttonName }) => {
             </div>
             <div className="place__content">
                 <h2 className="place__title">{title}</h2>
-                <hr className="place__hr"/>
+                <hr className="place__hr" />
                 <p className="place__text">{text}</p>
             </div>
             <label className="place__label">
@@ -40,7 +46,7 @@ export const Place: FC<IProps> = ({ src, alt, title, text, buttonName }) => {
                 </span>
             </label>
             <div className="place__button">
-                <Button name={buttonName} image="" />
+                <Button name={buttonName} image="" onClick={onClick} />
             </div>
         </div>
     )

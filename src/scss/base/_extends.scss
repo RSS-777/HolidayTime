@@ -1,3 +1,13 @@
-%exted-style {
-    color: pink;
+%exted-shadow-img {
+    box-shadow: 4px 4px 14px 2px black;
+}
+
+%exted-shadow-button {
+    box-shadow: 2px 2px 5px 0 black;
+    color: var(--color-white);
+
+    &:hover {
+        box-shadow: 1px 1px 3px 0 black;
+        color: var(--background-nav-sl-active);
+    }
 }

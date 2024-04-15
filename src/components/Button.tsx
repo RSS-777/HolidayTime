@@ -1,13 +1,17 @@
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 
 interface IButton {
     name: string,
-    image: string
+    image: string,
+    onClick?: (event: MouseEvent<HTMLButtonElement>) => void | null;
 };
 
-export const Button: FC<IButton> = ({ name, image }) => {
+export const Button: FC<IButton> = ({ name, image, onClick }) => {
     return (
-        <button className="button">
+        <button
+         className="button"
+         onClick={onClick}
+         >
             <span className="button__text">{name}</span>
             {image === ''
                 ? null

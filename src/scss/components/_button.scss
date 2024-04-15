@@ -8,10 +8,10 @@
     @include fluid-size-text(14, 24);
     text-align: center;
     border-radius: 38px;
+    @extend %exted-shadow-button;
 
     &__text {
         margin: 0 10px;
-        color: var(--color-white);
     }
 
     &__image {

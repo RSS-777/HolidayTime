@@ -5,7 +5,7 @@ import { TypeAppDispatch, TypeRootState } from "../store/store";
 import { setPlace } from "../store/placeSlice";
 
 const Personal: FC = () => {
-    const val = useSelector((state: TypeRootState) => state.places.place);
+    const placeChoice = useSelector((state: TypeRootState) => state.places.place);
 
     return (
         <Container>
