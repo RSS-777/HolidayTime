@@ -34,7 +34,7 @@ const Reserve: FC = () => {
     const handleChoice = (event: SingleValue<TypeOption>) => {
         if (event) {
             dispatch(setPlace(event.value))
-            navigate("/personal")
+            navigate("/order")
         }
     }
 

@@ -79,5 +79,29 @@
     },
     "details": {
         "button": "come back"
+    },
+    "formRegistration": {
+        "title": "Registration",
+        "firstName": "Name:",
+        "middleName": "Middle name:",
+        "lastName": "Last name:",
+        "password": "Password",
+        "sex": {
+            "man": "Man",
+            "woman": "Woman"
+        },
+        "born": "Date of birth:",
+        "phone": "Mobile phone:",
+        "email": "E. mail:",
+        "submit": "Submit",
+        "mistakes": {
+            "required": "The field cannot be empty!",
+            "minLength": "The field cannot have less than 3 characters!",
+            "pattern": {
+                "nowNumbers": "The field cannot contain numbers!",
+                "errorFormat": "Incorrect format!",
+                "password": "It is necessary to include different case letters and numbers!"
+            }
+        }
     }
 }

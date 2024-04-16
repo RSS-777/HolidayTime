@@ -9,6 +9,7 @@ import Reserve  from './pages/Reserve';
 import Personal from './pages/Personal';
 import Details from './pages/Details';
 import './scss/main.scss';
+import Order from './pages/Order';
 
 const App: FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: FC = () => {
           <Route path='/reserve' element={<Reserve />} />
           <Route path='/personal' element={<Personal />} />
           <Route path='/details' element={<Details />} />
+          <Route path='/order' element={<Order />} />
         </Routes>
       </main>
       <Footer />

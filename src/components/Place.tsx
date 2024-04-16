@@ -46,7 +46,7 @@ export const Place: FC<IProps> = ({ placeId, src, alt, title, text, buttonName, 
                 </span>
             </label>
             <div className="place__button">
-                <Button name={buttonName} image="" onClick={onClick} />
+                <Button name={buttonName}  onClick={onClick} />
             </div>
         </div>
     )
