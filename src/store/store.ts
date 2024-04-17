@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import languageReducer from "./languageSlice";
 import placeReducer from "./placeSlice";
 import likeReducer from "./likeSlice";
+import userLoggedReducer from "./userLoggedSlice";
 
 export const store = configureStore({
     reducer: {
-        languages: languageReducer,
         places: placeReducer,
-        likeChoice: likeReducer
+        likeChoice: likeReducer,
+        userLogged: userLoggedReducer
     }
 });
 

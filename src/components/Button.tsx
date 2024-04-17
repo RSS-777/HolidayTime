@@ -4,7 +4,7 @@ interface IButton {
     name: string,
     image?: string,
     onClick?: (event: MouseEvent<HTMLButtonElement>) => void | null,
-    type: 'button' | 'reset' | 'submit'
+    type?: 'button' | 'reset' | 'submit'
 };
 
 export const Button: FC<IButton> = ({ name, image='', onClick, type='button' }) => {

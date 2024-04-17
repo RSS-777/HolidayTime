@@ -3,7 +3,7 @@ import { Container } from "../components/Container";
 import { useSelector, useDispatch } from "react-redux";
 import { TypeAppDispatch, TypeRootState } from "../store/store";
 import { setPlace } from "../store/placeSlice";
-import { FormUsers} from "../components/FormRegistration";
+import { FormUsers} from "./FormRegistration";
 
 const Order: FC = () => {
     const placeChoice = useSelector((state: TypeRootState) => state.places.place);

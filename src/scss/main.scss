@@ -1,4 +1,4 @@
-@import './base/normalize', './base/fonts', './base/mixins', './base/variables', './base/media', './base/extends', './base/globals';
+@import './base/normalize', './base/fonts', './base/mixins', './base/variables', './base/media', './base/extends', './base/globals', './base/animation';
 @import './components/container';
 @import './components/navigation';
 @import './components/footer';
@@ -14,4 +14,5 @@
 @import './components/place';
 @import './pages/reserve';
 @import './pages/details';
-@import './components/formRegistration';
+@import './pages/formRegistration';
+@import './pages/personal';

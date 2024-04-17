@@ -1,0 +1,15 @@
+@mixin slideTop($position) {
+   animation: slideTopInDown $position  ease forwards;
+}
+
+@keyframes slideTopInDown {
+    0% {
+        top: - 100%;
+    }
+    50% {
+        top: 0;
+    }
+    100% {
+        top: -100%;
+    }
+}

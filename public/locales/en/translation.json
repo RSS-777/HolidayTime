@@ -81,6 +81,9 @@
         "button": "come back"
     },
     "formRegistration": {
+        "registration": {
+            "title": "Registration"
+        },
         "title": "Registration",
         "firstName": "Name:",
         "middleName": "Middle name:",
@@ -102,6 +105,17 @@
                 "errorFormat": "Incorrect format!",
                 "password": "It is necessary to include different case letters and numbers!"
             }
+        },
+        "checkValidate": {
+            "checkEmail": "A user with this email address already exists!",
+            "checkPhone": "A user with this number already exists!"
         }
+    },
+    "formLogin" : {
+        "title": "Authorization",
+        "noUser": "Such user is not registered!"
+    },
+    "personalOffice": {
+        "title": "Personal office"
     }
 }

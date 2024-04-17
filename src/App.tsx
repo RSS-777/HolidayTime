@@ -10,6 +10,7 @@ import Personal from './pages/Personal';
 import Details from './pages/Details';
 import './scss/main.scss';
 import Order from './pages/Order';
+import FormRegistration from './pages/FormRegistration';
 
 const App: FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: FC = () => {
           <Route path='/personal' element={<Personal />} />
           <Route path='/details' element={<Details />} />
           <Route path='/order' element={<Order />} />
+          <Route path='/registration' element={<FormRegistration />} />
         </Routes>
       </main>
       <Footer />
