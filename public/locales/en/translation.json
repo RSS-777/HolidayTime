@@ -116,6 +116,19 @@
         "noUser": "Such user is not registered!"
     },
     "personalOffice": {
-        "title": "Personal office"
+        "title": "Personal office",
+        "button" : {
+            "avatar": "Change avatar",
+            "service": "Setting",
+            "registration": "Registration",
+            "return": "come back",
+            "out": "Sign out"
+        },
+        "content": {
+            "sex":"Sex:",
+            "born": "Date of birth:",
+            "phone": "Cellphone:",
+            "email": "E. mail:"
+        }
     }
 }

@@ -48,16 +48,14 @@
     }
     
     &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @include fluid-img-width(124, 184);
         @include fluid-img-height(124, 184);
         border-radius: 50%;
         overflow: hidden;
         background-color: white;
-
-        img {
-            height: 100%; 
-            width: 100%;
-        }
     }
 
     &__hr {

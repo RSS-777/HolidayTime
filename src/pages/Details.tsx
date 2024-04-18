@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const Details: FC = () => {
     const { state } = useLocation();
-    const { place, img } = state;
+    const {place, img} = state;
     const { t } = useTranslation();
     const navigate = useNavigate();
 

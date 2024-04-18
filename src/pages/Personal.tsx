@@ -2,19 +2,16 @@ import { FC, useState, useEffect } from "react";
 import { Container } from "../components/Container";
 import { useSelector, useDispatch } from "react-redux";
 import { TypeAppDispatch, TypeRootState } from "../store/store";
-import { setPlace } from "../store/placeSlice";
 import { Button } from "../components/Button";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { FormLogin } from "../components/FormLogin";
 import { setUser } from "../store/userLoggedSlice";
+import ChangePersonalData from "./ChangePersonalData";
 import man from '../assets/images/personal/man.png';
 import woman from '../assets/images/personal/woman.png';
 
-Локалізувати сторінку!!! Добавити функціонал для зміни данних!!!
-
-
-interface IData {
+export interface IData {
     firstName: string,
     middleName: string,
     lastName: string,
@@ -27,8 +24,9 @@ interface IData {
 };
 
 const Personal: FC = () => {
-    const [activeUser, setАctiveUser] = useState<IData>()
-    const [upload, setUpload] = useState<boolean>(false)
+    const [changeData, setChangeData] = useState<boolean>(false);
+    const [activeUser, setActiveUser] = useState<IData>();
+    const [upload, setUpload] = useState<boolean>(false);
     const usersData: IData[] | null = JSON.parse(localStorage.getItem('users') ?? 'null');
     const userLogged = useSelector((state: TypeRootState) => state.userLogged.user);
     const dispatch: TypeAppDispatch = useDispatch();
@@ -37,7 +35,7 @@ const Personal: FC = () => {
 
     useEffect(() => {
         const currentUser = usersData?.find(item => item.email === userLogged.email);
-        setАctiveUser(currentUser)
+        setActiveUser(currentUser)
     }, [userLogged])
 
     const handleLink = () => {
@@ -53,7 +51,7 @@ const Personal: FC = () => {
     }
 
     const handleService = () => {
-
+        setChangeData(true)
     }
 
     const handleOut = () => {
@@ -75,6 +73,7 @@ const Personal: FC = () => {
                         return user;
                     });
                     localStorage.setItem('users', JSON.stringify(updatedUsers));
+                    setActiveUser(updatedUsers.find(user => user.email === activeUser?.email));
                 }
             };
             reader.readAsDataURL(file);
@@ -88,55 +87,59 @@ const Personal: FC = () => {
                 <div className="personal__titles">
                     <h2 className="personal__title">{t("personalOffice.title")}</h2>
                 </div>
-                {userLogged.status
-
-                    ? <div className="personal__data">
-                        <div className="personal__servise">
-                            <div className="personal__image">
-                                <img src={
-                                    activeUser?.image
-                                        ? activeUser?.image
-                                        : ((activeUser?.sex === "Чоловік" || activeUser?.sex === "Мужчина" || activeUser?.sex === "Man") ? man : woman)
-                                } alt="Avatar" />
-                            </div>
-                            <div className="personal__block-button">
-                                <Button name="Змінити аватар" onClick={handleAvatar} />
-                                <Button name="Налаштування" onClick={handleService} />
-                            </div>
-                        </div>
-                        <div className="personal__content">
-                            <div className="personal__initials">
-                                {activeUser?.firstName} {activeUser?.middleName} {activeUser?.lastName}
-                            </div>
-                            <hr className="personal__hr" />
-                            <div className="personal__sex">Стать: {activeUser?.sex}</div>
-                            <hr className="personal__hr" />
-                            <div className="personal__born">Дата Народження: {activeUser?.born}</div>
-                            <hr className="personal__hr" />
-                            <div className="personal__phone">Мобільний телефон: {activeUser?.phone}</div>
-                            <hr className="personal__hr" />
-                            <div className="personal__email">Ел.пошта: {activeUser?.email}</div>
-                        </div>
-                        <div className="personal__button">
-                            <Button name="Вийти з системи" onClick={handleOut} />
-                        </div>
-                        {upload
-                            ? <div className="personal__upload">
-                                <input className="personal__input" type="file" id="upload" onChange={handleFileChange} />
-                                <div className="personal__return">
-                                    <Button name="Повернутись" onClick={handleReturn} />
+                {(userLogged.status
+                ) ? (
+                    changeData
+                        ? <ChangePersonalData dataChoiceUser={activeUser} setChangeData={setChangeData} />
+                        : <div className="personal__data">
+                            <div className="personal__servise">
+                                <div className="personal__image">
+                                    <img src={
+                                        activeUser?.image
+                                            ? activeUser?.image
+                                            : ((activeUser?.sex === "Чоловік" || activeUser?.sex === "Мужчина" || activeUser?.sex === "Man") ? man : woman)
+                                    } alt="Avatar" />
+                                </div>
+                                <div className="personal__block-button">
+                                    <Button name={t("personalOffice.button.avatar")} onClick={handleAvatar} />
+                                    <Button name={t("personalOffice.button.service")} onClick={handleService} />
                                 </div>
                             </div>
-                            : null
-                        }
-                    </div>
+                            <div className="personal__content">
+                                <div className="personal__initials">
+                                    {activeUser?.firstName} {activeUser?.middleName} {activeUser?.lastName}
+                                </div>
+                                <hr className="personal__hr" />
+                                <div className="personal__sex">{t("personalOffice.content.sex")} {activeUser?.sex}</div>
+                                <hr className="personal__hr" />
+                                <div className="personal__born">{t("personalOffice.content.born")} {activeUser?.born}</div>
+                                <hr className="personal__hr" />
+                                <div className="personal__phone">{t("personalOffice.content.phone")} {activeUser?.phone}</div>
+                                <hr className="personal__hr" />
+                                <div className="personal__email">{t("personalOffice.content.email")} {activeUser?.email}</div>
+                            </div>
+                            <div className="personal__button">
+                                <Button name={t("personalOffice.button.out")} onClick={handleOut} />
+                            </div>
+                            {upload
+                                ? <div className="personal__upload">
+                                    <input className="personal__input" type="file" id="upload" onChange={handleFileChange} />
+                                    <div className="personal__return">
+                                        <Button name={t("personalOffice.button.return")} onClick={handleReturn} />
+                                    </div>
+                                </div>
+                                : null
+                            }
+                        </div>
 
-                    : <div className="personal__login">
+                ) : (
+                    <div className="personal__login">
                         <FormLogin />
                         <div className="personal__button-log">
-                            <Button name="Реєстрація" onClick={handleLink} />
+                            <Button name={t("personalOffice.button.registration")} onClick={handleLink} />
                         </div>
                     </div>
+                )
                 }
             </div>
         </Container>

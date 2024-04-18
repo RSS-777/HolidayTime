@@ -3,14 +3,14 @@ import { Container } from "../components/Container";
 import { Place } from "../components/Place";
 import Select, { SingleValue } from 'react-select';
 import { useTranslation } from "react-i18next";
-import imageBacota from '../assets/images/reserve/bacota.svg';
-import imageCarpathians from '../assets/images/reserve/carpathians.svg';
-import imageKyiv from '../assets/images/reserve/kyiv.svg';
-import imageOddesa from '../assets/images/reserve/oddesa.svg';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { TypeAppDispatch } from "../store/store";
 import { setPlace } from "../store/placeSlice";
+import imageBacota from '../assets/images/reserve/bacota.svg';
+import imageCarpathians from '../assets/images/reserve/carpathians.svg';
+import imageKyiv from '../assets/images/reserve/kyiv.svg';
+import imageOddesa from '../assets/images/reserve/oddesa.svg';
 
 type TypeOption = {
     value: string,
@@ -39,7 +39,7 @@ const Reserve: FC = () => {
     }
 
     const handleDetails: TypeProps = (place, img) => {
-        navigate('/details', { state: { place, img } });
+        navigate('/details', { state: {place, img} });
     }
 
     return (
