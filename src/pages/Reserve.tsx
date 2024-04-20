@@ -26,8 +26,8 @@ const Reserve: FC = () => {
 
     const options: TypeOption[] = [
         { value: 'bakota', label: t("reserve.options.bakota") },
-        { value: 'сarpathians', label: t("reserve.options.carpathians") },
-        { value: 'кyiv', label: t("reserve.options.kyiv") },
+        { value: 'carpathians', label: t("reserve.options.carpathians") },
+        { value: 'kyiv', label: t("reserve.options.kyiv") },
         { value: 'odessa', label: t("reserve.options.odessa") }
     ]
 

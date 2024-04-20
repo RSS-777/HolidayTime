@@ -130,5 +130,16 @@
             "phone": "Cellphone:",
             "email": "E. mail:"
         }
+    },
+    "order" : {
+        "title": "Booking a house in",
+        "places": {
+            "bakota": "Bakoti",
+            "carpathians": "Carpathians",
+            "kyiv": "Kyiv",
+            "odessa": "Odesa region"
+        },
+        "image": "Photo nature in",
+        "button": "Back"
     }
 }
