@@ -1,0 +1,184 @@
+.room {
+    max-width: 1490px;
+    margin: 0 auto;
+
+    &__title {
+        font-family: var(--font-family-PTSans-bold);
+        @include fluid-size-text(24, 48);
+        color: var(--color-primary);
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    &__content {
+        background: var(--background-title);
+        padding: 15px 45px;
+        margin-top: 32px;
+    }
+
+    &__question {
+        @include fluid-size-text(18, 29);
+        color: var(--color-black);
+    }
+
+    &__block {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        max-width: 1300px;
+        margin-top: 24px;
+    }
+
+    &__button-check {
+        width: 351px;
+        height: 112px;
+        @include fluid-size-text(20, 29);
+        text-align: center;
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        @extend %exted-shadow-button;
+    }
+
+    &__data {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    &__data-in {
+        width: 50%;
+    }
+
+    &__data-out {
+        width: 50%;
+    }
+
+    &__title-data {
+        @include fluid-size-text(18, 29);
+        color: var(--color-black);
+    }
+
+    &__input {
+        border: 2px solid var(--border-color-input);
+        padding: 18px 28px;
+        width: 100%;
+        max-width: 350px;
+        height: 62px;
+    }
+
+    &__choice {
+        display: flex;
+        gap: 48px;
+        margin-top: 10px;
+    }
+
+    &__block-choice {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    &__board {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border: 2px solid var(--border-color-input);
+        width: 62px;
+        height: 62px;
+    }
+
+    &__title-board {
+        font-size: 36px;
+        @include fluid-size-text(18, 36);
+        color: var(--color-black);
+    }
+
+    &__buttons-board {
+        position: absolute;
+        right: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__button-up {
+        width: 12px;
+        height: 14px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        margin-bottom: 4px;
+    }
+
+    &__button-down {
+        width: 12px;
+        height: 14px;
+        padding: 0;
+        margin-top: 4px;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+@include table {
+    .room {
+        &__content {
+            padding: 15px 10px;
+        }
+
+        &__block {
+            align-items: center;
+        }
+
+        &__data {
+            flex-direction: column;
+        }
+
+        &__data-in {
+            width: 100%;
+            max-width: 350px;
+        }
+    
+        &__data-out {
+            max-width: 350px;
+            width: 100%;
+        }
+
+        &__choice {
+            justify-content: center;
+            gap: 48px;
+        }
+    }
+}
+
+@include modile {
+    .room {
+        &__block {
+            flex-direction: column;
+        }
+
+        &__data-in,
+        &__data-out {
+           margin-left: auto;
+           margin-right: auto;
+        }
+
+        &__button-check {
+           max-width: 351px;
+           width: 100%;
+        }
+
+        &__choice {
+            justify-content: space-evenly;
+            gap: 10px;
+        }
+
+        &__block-choice {
+            flex-direction: column;
+        }
+    }
+}
+

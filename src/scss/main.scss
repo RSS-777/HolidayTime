@@ -1,4 +1,12 @@
-@import './base/normalize', './base/fonts', './base/mixins', './base/variables', './base/media', './base/extends', './base/globals', './base/animation';
+@import './base/normalize',
+'./base/fonts',
+'./base/mixins',
+'./base/variables',
+'./base/media',
+'./base/extends',
+'./base/globals',
+'./base/animation';
+
 @import './components/container';
 @import './components/navigation';
 @import './components/footer';
@@ -17,3 +25,5 @@
 @import './pages/formRegistration';
 @import './pages/personal';
 @import './pages/order';
+@import './components/roomSelection';
+@import './components/price';

@@ -140,6 +140,24 @@
             "odessa": "Odesa region"
         },
         "image": "Photo nature in",
-        "button": "Back"
+        "button": "Back",
+        "room" : {
+            "title" : "Availability of seats",
+            "question": "When would you like to stay in the house Polonyna Karpat?",
+            "buttonCheck": "Check availability of seats",
+            "titleDataIn": "Check-in date",
+            "titleDataOut": "Departure date",
+            "nameNumb": "Numbers",
+            "nameOld": "Adults",
+            "nameChild": "Children"
+        },
+        "price": {
+            "titleSpice": "Contains",
+            "titleType": "Type of accommodation",
+            "titleOrder": "Price",
+            "textOne": "Double room",
+            "textTwo": "1 wide double bed",
+            "button": "Show prices"
+        }
     }
 }

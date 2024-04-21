@@ -1,5 +1,6 @@
 import { FC, useEffect } from "react";
 import { Container } from "../components/Container";
+import { RoomSelection } from "../components/RoomSelection";
 import { useSelector, useDispatch } from "react-redux";
 import { TypeAppDispatch, TypeRootState } from "../store/store";
 import { setPlace } from "../store/placeSlice";
@@ -16,6 +17,7 @@ import carpathiansFlat from '../assets/images/order/carpathiansFlat.svg';
 import carpathiansBathroom from '../assets/images/order/carpathiansBathroom.svg';
 import carpathiansRoom from '../assets/images/order/carpathiansRoom.svg';
 import { Button } from "../components/Button";
+import { Price } from "../components/Price";
 
 type TypeImagePlace = {
     [key: string]: {
@@ -91,6 +93,8 @@ const Order: FC = () => {
                                 </div>
                             </div>
                         </div>
+                        <RoomSelection />
+                        <Price />
                     </div>
                 </Container>
             }
