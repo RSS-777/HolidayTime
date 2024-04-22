@@ -9,7 +9,7 @@ import './i18n.ts';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename='HolidayTime'>
         <App />
       </BrowserRouter>
     </Provider>
