@@ -1,0 +1,161 @@
+{
+    "navigation": {
+        "main": "main",
+        "about us": "about us",
+        "reserve": "reserve",
+        "contacts": "contacts",
+        "personal": "personal",
+        "office": "office"
+    },
+    "home": {
+        "titles": {
+            "title": "An authentic vacation in the midst of Ukrainian color!"
+        },
+        "slider": {
+            "text": "Polonyny Carpathians, in the village of Oriv in the middle of the mountains there is a cozy corner for unforgettable experiences. Real Ukrainian mountains, homemade cheese-making on polony, waterfalls and ancient trees are waiting for you.",
+            "button": "Review"
+        },
+        "relax": {
+            "text": "Active recreation in unusual locations. Pristine nature and local flavor will give you unforgettable impressions."
+        },
+        "feedback": {
+            "title": "Feedback",
+            "name": "Name",
+            "name placeholder": "Enter a name",
+            "phone": "Phone number",
+            "phone placeholder": "Enter a phone number",
+            "button": "Request a challenge"
+        }
+    },
+    "contacts": {
+        "title": "Contacts",
+        "phone": "Phone",
+        "number": "+380930000000",
+        "schedule": "Work schedule",
+        "schedule mon fri": "mon-fri 08:00 - 18:00",
+        "schedule sat": "sat 09:00 - 17:00",
+        "schedule sun": "sun 10:00 - 14:00",
+        "email": "E. mail",
+        "email link": "hello@gmail.com",
+        "address": "Office address",
+        "address name": "Kyiv, st. Putunkevicha, building 10"
+    },
+    "about": {
+        "title": "About us",
+        "image title": "HolidayTime",
+        "image text": "Rest, emotions, impressions, atypical routes, incredible locations - this is all about rural eco-tourism in Ukraine",
+        "text": "Our team has collected the most colorful places of our country just for you.\n\nThe mission of our company is to give unforgettable impressions and show Ukraine from a different side. Walk with you along the forest paths to eat fresh Carpathian cheese. Dive into the canyon and see the village of Bakota submerged under the layer of years. Take a ride on the gondolas in the 'Ukrainian Venice'.\n\nExplore Ukraine together!"
+    },
+    "reserve": {
+        "title": "Book a house",
+        "placeholder": "Choose a location",
+        "options": {
+            "bakota": "Bakota",
+            "carpathians": "Carpathians",
+            "kyiv": "Kyiv",
+            "odessa": "Odessa region"
+        },
+        "place": {
+            "bakota": {
+                "title": "Unexplored Bakota",
+                "text": "In the Khmelnytskyi region, there is a lost land - Bakota. A picturesque canyon with an ancient history fascinates with its spaciousness and unusual atmosphere. Beekeeping, fresh honey from wild herbs, touch with nature."
+            },
+            "carpathians": {
+                "title": "Polonyny of the Carpathians",
+                "text": "Polonyny Carpathians, in the village of Oriv in the middle of the mountains there is a cozy corner for unforgettable experiences. Real Ukrainian mountains, homemade cheese-making on polony, waterfalls and ancient trees are waiting for you."
+            },
+            "kyiv": {
+                "title": "Authentic Kyiv region",
+                "text": "An authentic Ukrainian village was located near the center of Kyiv on the territory of the village of the same name, Pyrogovo. Wooden mills, fragrant bread prepared with your own hands, Ukrainian songs and much more await you right now."
+            },
+            "odessa": {
+                "title": "Atypical Odesa",
+                "text": "The picturesque town of Vylkovo is located in Odesa region. It is also called 'Ukrainian Venice'. Vylkovo is a town on the water, surrounded by canals. Located in the place where the Danube River and the Black Sea meet. People move mainly by boats. An atypical Ukrainian village will not leave you without impressions."
+            },
+            "button": "More details"
+        }
+    },
+    "details": {
+        "button": "come back"
+    },
+    "formRegistration": {
+        "registration": {
+            "title": "Registration"
+        },
+        "title": "Registration",
+        "firstName": "Name:",
+        "middleName": "Middle name:",
+        "lastName": "Last name:",
+        "password": "Password",
+        "sex": {
+            "man": "Man",
+            "woman": "Woman"
+        },
+        "born": "Date of birth:",
+        "phone": "Mobile phone:",
+        "email": "E. mail:",
+        "submit": "Submit",
+        "mistakes": {
+            "required": "The field cannot be empty!",
+            "minLength": "The field cannot have less than 3 characters!",
+            "pattern": {
+                "nowNumbers": "The field cannot contain numbers!",
+                "errorFormat": "Incorrect format!",
+                "password": "It is necessary to include different case letters and numbers!"
+            }
+        },
+        "checkValidate": {
+            "checkEmail": "A user with this email address already exists!",
+            "checkPhone": "A user with this number already exists!"
+        }
+    },
+    "formLogin": {
+        "title": "Authorization",
+        "noUser": "Such user is not registered!"
+    },
+    "personalOffice": {
+        "title": "Personal office",
+        "button": {
+            "avatar": "Change avatar",
+            "service": "Setting",
+            "registration": "Registration",
+            "return": "come back",
+            "out": "Sign out"
+        },
+        "content": {
+            "sex": "Sex:",
+            "born": "Date of birth:",
+            "phone": "Cellphone:",
+            "email": "E. mail:"
+        }
+    },
+    "order": {
+        "title": "Booking a house in",
+        "places": {
+            "bakota": "Bakoti",
+            "carpathians": "Carpathians",
+            "kyiv": "Kyiv",
+            "odessa": "Odesa region"
+        },
+        "image": "Photo nature in",
+        "button": "Back",
+        "room": {
+            "title": "Availability of seats",
+            "question": "When would you like to stay in the house Polonyna Karpat?",
+            "buttonCheck": "Check availability of seats",
+            "titleDataIn": "Check-in date",
+            "titleDataOut": "Departure date",
+            "nameNumb": "Numbers",
+            "nameOld": "Adults",
+            "nameChild": "Children"
+        },
+        "price": {
+            "titleSpice": "Contains",
+            "titleType": "Type of accommodation",
+            "titleOrder": "Price",
+            "textOne": "Double room",
+            "textTwo": "1 wide double bed",
+            "button": "Show prices"
+        }
+    }
+}
