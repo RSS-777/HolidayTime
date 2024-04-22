@@ -24,7 +24,7 @@
         max-width: 1575px;
         @include fluid-img-height(180, 227);
         margin: 23px auto 0;
-        background-image: url(../../../public/images/about/image_fone.svg);
+        background-image: url(/public/images/about/image_fone.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50%;

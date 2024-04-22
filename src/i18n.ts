@@ -8,9 +8,12 @@ i18n
 .use(LanguageDetector)
 .use(initReactI18next)
 .init({
-    // debug: true,
+    debug: true,
     lng: 'ua', 
-    fallbackLng: 'ua'
+    fallbackLng: 'ua',
+    backend: {
+        loadPath: '/HolidayTime/locales/{{lng}}/{{ns}}.json'
+      }
 })
 
 export default i18n;
