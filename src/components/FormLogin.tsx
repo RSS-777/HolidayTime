@@ -13,7 +13,7 @@ interface IData {
 
 export const FormLogin: FC = () => {
     const [noUser, setNoUser] = useState<boolean>(false);
-    const { register, reset, handleSubmit, formState: { errors, isValid } } = useForm<IData>();
+    const { register, reset, handleSubmit, formState: { errors } } = useForm<IData>();
     const usersData: IData[] | null = JSON.parse(localStorage.getItem('users') ?? 'null');
     const { t } = useTranslation();
     const dispatch: TypeAppDispatch = useDispatch();
