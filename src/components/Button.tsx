@@ -7,13 +7,13 @@ interface IButton {
     type?: 'button' | 'reset' | 'submit'
 };
 
-export const Button: FC<IButton> = ({ name, image='', onClick, type='button' }) => {
+export const Button: FC<IButton> = ({ name, image = '', onClick, type = 'button' }) => {
     return (
         <button
-         className="button"
-         type={type}
-         onClick={onClick}
-         >
+            className="button"
+            type={type}
+            onClick={onClick}
+        >
             <span className="button__text">{name}</span>
             {image === ''
                 ? null

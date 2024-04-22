@@ -1,16 +1,16 @@
 import { FC } from 'react';
 import { Navigation } from './components/Navigation';
-import { Footer } from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Contacts  from './pages/Contacts';
+import Contacts from './pages/Contacts';
 import AboutUs from './pages/AboutUs';
-import Reserve  from './pages/Reserve';
+import Reserve from './pages/Reserve';
 import Personal from './pages/Personal';
 import Details from './pages/Details';
-import './scss/main.scss';
 import Order from './pages/Order';
 import FormRegistration from './pages/FormRegistration';
+import { Footer } from './components/Footer';
+import './scss/main.scss';
 
 const App: FC = () => {
   return (
@@ -34,11 +34,5 @@ const App: FC = () => {
     </>
   )
 }
-// export default function WrappedApp() {
-//   return(
-//     <Suspense fallback="...loading">
-//       <App />
-//     </Suspense>
-//   )
-// }
+
 export default App

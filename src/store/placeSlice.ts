@@ -1,22 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 type TypeInitialState = {
-   place: string
+  place: string
 }
 
 const initialState: TypeInitialState = {
-   place: "",
+  place: "",
 }
 
 const placeSlice = createSlice({
-    name: 'places',
-    initialState,
-    reducers:  {
-      setPlace: (state, action) => {
-        state.place = action.payload
-      }
+  name: 'places',
+  initialState,
+  reducers: {
+    setPlace: (state, action) => {
+      state.place = action.payload
     }
+  }
 });
 
 export default placeSlice.reducer;
-export const {setPlace} = placeSlice.actions;
+export const { setPlace } = placeSlice.actions;

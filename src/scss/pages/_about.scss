@@ -1,11 +1,11 @@
 .about {
     min-height: 90vh;
-    
+
     &__titles {
-      display: flex;
-      align-items: center;
-      background-color: var(--background-title);
-      height: 140px;
+        display: flex;
+        align-items: center;
+        background-color: var(--background-title);
+        height: 140px;
     }
 
     &__title {

@@ -1,9 +1,9 @@
 .price {
+    display: flex;
+    justify-content: space-between;
     max-width: 1490px;
     height: 279px;
     margin: 48px auto;
-    display: flex;
-    justify-content: space-between;
 
     &__space {
         text-align: center;
@@ -37,14 +37,14 @@
 
     &__text {
         font-family: var(--font-family-PTSans-reg-it);
-        @include fluid-size-text(18, 32);
+        @include fluid-size-text(16, 32);
         color: var(--color-black);
         padding: 19px 38px
     }
 
     &__image-bed {
-        @include fluid-img-height(29, 39);
-        @include fluid-img-width(82, 102);
+        @include fluid-img-height(22, 39);
+        @include fluid-img-width(52, 102);
         margin-left: 10px;
     }
 
@@ -60,6 +60,7 @@
         justify-content: center;
         align-items: center;
         height: 203px;
+        margin: auto 10px;
     }
 
     &__button {
@@ -86,5 +87,66 @@
 
     &__image-piope {
         width: 42px;
+    }
+}
+
+@include desktop {
+    .price {
+        &__space {
+            width: 25%;
+        }
+
+        &__type {
+            width: 50%;
+        }
+
+        &__order {
+            width: 25%;
+        }
+    }
+}
+
+@include table {
+    .price {
+        flex-wrap: wrap;
+        height: auto;
+
+        &__title {
+            justify-content: center;
+            padding-left: inherit;
+            height: 56px;
+        }
+
+        &__space {
+            width: 30%;
+
+        }
+
+        &__type {
+            width: 70%;
+        }
+
+        &__text {
+            padding: 19px 18px
+        }
+
+        &__image-bed {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 24px;
+        }
+
+        &__order {
+            width: 100%;
+            height: 150px;
+        }
+
+        &__buttons {
+            height: 94px;
+        }
+
+        &__button {
+            height: 40px;
+        }
     }
 }

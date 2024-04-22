@@ -1,23 +1,20 @@
 import { FC, useEffect } from "react";
-import { Container } from "../components/Container";
-import { RoomSelection } from "../components/RoomSelection";
-import { useSelector, useDispatch } from "react-redux";
-import { TypeAppDispatch, TypeRootState } from "../store/store";
-import { setPlace } from "../store/placeSlice";
-// import { FormUsers} from "./FormRegistration";
+import { useSelector } from "react-redux";
+import { TypeRootState } from "../store/store";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Container } from "../components/Container";
+import { RoomSelection } from "../components/RoomSelection";
+import { Button } from "../components/Button";
+import { Price } from "../components/Price";
 import bacota from '../assets/images/reserve/bacota.svg';
 import carpathians from '../assets/images/reserve/carpathians.svg';
 import kyiv from '../assets/images/reserve/kyiv.svg';
 import odessa from '../assets/images/reserve/oddesa.svg';
 import comeBack from '../assets/images/home/Arrow left.png';
-
 import carpathiansFlat from '../assets/images/order/carpathiansFlat.svg';
 import carpathiansBathroom from '../assets/images/order/carpathiansBathroom.svg';
 import carpathiansRoom from '../assets/images/order/carpathiansRoom.svg';
-import { Button } from "../components/Button";
-import { Price } from "../components/Price";
 
 type TypeImagePlace = {
     [key: string]: {
@@ -27,6 +24,7 @@ type TypeImagePlace = {
         bathroom: string
     }
 }
+
 const imagePlace: TypeImagePlace = {
     bakota: {
         place: bacota,

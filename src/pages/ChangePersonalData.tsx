@@ -1,12 +1,12 @@
 import { FC } from "react";
-import { IData } from "./Personal";
 import { useSelector, useDispatch } from "react-redux";
 import { TypeRootState } from "../store/store";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Button } from "../components/Button";
-import { useTranslation } from "react-i18next";
-import { setUser } from "../store/userLoggedSlice";
 import { TypeAppDispatch } from "../store/store";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { IData } from "./Personal";
+import { Button } from "../components/Button";
+import { setUser } from "../store/userLoggedSlice";
 
 interface IProps {
     dataChoiceUser: IData | undefined,
@@ -192,7 +192,6 @@ const ChangePersonalData: FC<IProps> = ({ dataChoiceUser, setChangeData }) => {
                 </div>
             }
         </>
-
     )
 };
 

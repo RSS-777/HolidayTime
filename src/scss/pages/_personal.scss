@@ -47,7 +47,7 @@
         flex-direction: column;
         gap: 18px;
     }
-    
+
     &__image {
         display: flex;
         align-items: center;
@@ -99,7 +99,7 @@
         @include fluid-size-text(14, 35);
         margin-left: 45px;
     }
-    
+
     &__return {
         position: absolute;
         bottom: 20px;
@@ -114,6 +114,7 @@
         }
     }
 }
+
 @include table {
     .personal {
         &__data {
@@ -121,14 +122,14 @@
             height: auto;
             padding: 20px 10px;
         }
-    
+
         &__servise {
             flex-direction: row;
             justify-content: space-around;
             margin-bottom: 18px;
             width: 100%;
         }
-        
+
         &__content {
             width: 100%;
         }

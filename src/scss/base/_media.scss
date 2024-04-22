@@ -8,28 +8,28 @@ $breakpoint_sm: 480px;
     @media (max-width: $breakpoint_xxl) {
         @content;
     }
-};
+}
 
-@mixin desktopL{
+@mixin desktopL {
     @media (max-width: $breakpoint_xll) {
         @content;
     }
-};
+}
 
 @mixin laptop {
     @media (max-width: $breakpoint_xl) {
         @content;
     }
-};
+}
 
 @mixin table {
     @media (max-width: $breakpoint_md) {
         @content;
     }
-};
+}
 
 @mixin modile {
     @media (max-width: $breakpoint_sm) {
         @content;
     }
-};
+}

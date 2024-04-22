@@ -4,7 +4,7 @@ import { Titles } from '../components/Titles';
 import { SliderBlock } from '../components/SliderBlock';
 import { Relax } from '../components/Relax';
 import { Feedback } from '../components/Feedback';
-import upHillIcon from '../assets/images/home/uphill.png'; 
+import upHillIcon from '../assets/images/home/uphill.png';
 
 const Home: FC = () => {
     return (

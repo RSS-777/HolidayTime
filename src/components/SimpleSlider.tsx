@@ -2,14 +2,13 @@ import { FC } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { TypeAppDispatch } from "../store/store";
 import { setIndex } from "../store/indexSlideSlice";
 import bacotaImg from '../assets/images/reserve/bacota.svg';
 import carpathiansImg from '../assets/images/reserve/carpathians.svg';
 import kyivImg from '../assets/images/reserve/kyiv.svg';
 import oddesaImg from '../assets/images/reserve/oddesa.svg';
-
 
 export const SimpleSlider: FC = () => {
     const dispatch: TypeAppDispatch = useDispatch();
@@ -26,7 +25,7 @@ export const SimpleSlider: FC = () => {
         slidesToScroll: 1,
         afterChange: handleSlideChange
     };
-    
+
     return (
         <Slider className="slider" {...settings}>
             <div>

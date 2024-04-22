@@ -1,10 +1,10 @@
 import { ChangeEvent, FC, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Container } from "./Container";
+import { useTranslation } from "react-i18next";
+import Select, { SingleValue } from 'react-select';
 import group from '../assets/images/navigation/Group.png';
 import logo from '../assets/images/navigation/logo.png';
-import Select, { SingleValue } from 'react-select';
-import { Container } from "./Container";
-import {useTranslation} from "react-i18next";
 
 type TypeOption = {
     value: string,
@@ -63,7 +63,9 @@ export const Navigation: FC = () => {
                     <div className="navigation__lintel"></div>
                     <NavLink className='navigation__link' to='/contacts'>{t('navigation.contacts')}</NavLink>
                     <div className="navigation__lintel"></div>
-                    <NavLink className='navigation__link' to='/personal'>{t('navigation.personal')} {smallScreen < 768 ? null : <br />} {t('navigation.office')}</NavLink>
+                    <NavLink className='navigation__link' to='/personal'>
+                        {t('navigation.personal')} {smallScreen < 768 ? null : <br />} {t('navigation.office')}
+                    </NavLink>
                     <div className="navigation__lintel"></div>
                     <div className='navigation__link navigation__link_flex'>
                         <img className='navigation__image-group' src={group} alt="Group Image" />
@@ -81,7 +83,7 @@ export const Navigation: FC = () => {
                         <input
                             className="navigation__input"
                             name="changeLanguage"
-                            type="checkbox" 
+                            type="checkbox"
                             onChange={handleChekBox}
                         />
                         <span className="navigation__burger-span"></span>

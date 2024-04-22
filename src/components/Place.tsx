@@ -1,10 +1,10 @@
 import { ChangeEvent, FC, MouseEvent } from "react";
-import iconLike from '../assets/images/reserve/emojione_star.png';
-import iconLikeActive from '../assets/images/reserve/emojione_star_active.png';
 import { Button } from "./Button";
 import { useDispatch, useSelector } from "react-redux";
 import { TypeAppDispatch, TypeRootState } from "../store/store";
 import { setLike } from "../store/likeSlice";
+import iconLike from '../assets/images/reserve/emojione_star.png';
+import iconLikeActive from '../assets/images/reserve/emojione_star_active.png';
 
 interface IProps {
     placeId: string,
@@ -46,7 +46,7 @@ export const Place: FC<IProps> = ({ placeId, src, alt, title, text, buttonName, 
                 </span>
             </label>
             <div className="place__button">
-                <Button name={buttonName}  onClick={onClick} />
+                <Button name={buttonName} onClick={onClick} />
             </div>
         </div>
     )

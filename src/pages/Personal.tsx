@@ -1,10 +1,10 @@
 import { FC, useState, useEffect } from "react";
-import { Container } from "../components/Container";
 import { useSelector, useDispatch } from "react-redux";
 import { TypeAppDispatch, TypeRootState } from "../store/store";
-import { Button } from "../components/Button";
-import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Container } from "../components/Container";
+import { Button } from "../components/Button";
 import { FormLogin } from "../components/FormLogin";
 import { setUser } from "../store/userLoggedSlice";
 import ChangePersonalData from "./ChangePersonalData";

@@ -1,5 +1,5 @@
 {
-    "navigation" : {
+    "navigation": {
         "main": "main",
         "about us": "about us",
         "reserve": "reserve",
@@ -7,16 +7,15 @@
         "personal": "personal",
         "office": "office"
     },
-
     "home": {
         "titles": {
             "title": "An authentic vacation in the midst of Ukrainian color!"
         },
-        "slider" : {
+        "slider": {
             "text": "Polonyny Carpathians, in the village of Oriv in the middle of the mountains there is a cozy corner for unforgettable experiences. Real Ukrainian mountains, homemade cheese-making on polony, waterfalls and ancient trees are waiting for you.",
             "button": "Review"
         },
-        "relax" : {
+        "relax": {
             "text": "Active recreation in unusual locations. Pristine nature and local flavor will give you unforgettable impressions."
         },
         "feedback": {
@@ -28,13 +27,12 @@
             "button": "Request a challenge"
         }
     },
-    
-    "contacts" : {
+    "contacts": {
         "title": "Contacts",
         "phone": "Phone",
         "number": "+380930000000",
         "schedule": "Work schedule",
-        "schedule mon fri": "mon-fri 08:00 - 18:00", 
+        "schedule mon fri": "mon-fri 08:00 - 18:00",
         "schedule sat": "sat 09:00 - 17:00",
         "schedule sun": "sun 10:00 - 14:00",
         "email": "E. mail",
@@ -42,7 +40,7 @@
         "address": "Office address",
         "address name": "Kyiv, st. Putunkevicha, building 10"
     },
-    "about" : {
+    "about": {
         "title": "About us",
         "image title": "HolidayTime",
         "image text": "Rest, emotions, impressions, atypical routes, incredible locations - this is all about rural eco-tourism in Ukraine",
@@ -111,13 +109,13 @@
             "checkPhone": "A user with this number already exists!"
         }
     },
-    "formLogin" : {
+    "formLogin": {
         "title": "Authorization",
         "noUser": "Such user is not registered!"
     },
     "personalOffice": {
         "title": "Personal office",
-        "button" : {
+        "button": {
             "avatar": "Change avatar",
             "service": "Setting",
             "registration": "Registration",
@@ -125,13 +123,13 @@
             "out": "Sign out"
         },
         "content": {
-            "sex":"Sex:",
+            "sex": "Sex:",
             "born": "Date of birth:",
             "phone": "Cellphone:",
             "email": "E. mail:"
         }
     },
-    "order" : {
+    "order": {
         "title": "Booking a house in",
         "places": {
             "bakota": "Bakoti",
@@ -141,8 +139,8 @@
         },
         "image": "Photo nature in",
         "button": "Back",
-        "room" : {
-            "title" : "Availability of seats",
+        "room": {
+            "title": "Availability of seats",
             "question": "When would you like to stay in the house Polonyna Karpat?",
             "buttonCheck": "Check availability of seats",
             "titleDataIn": "Check-in date",

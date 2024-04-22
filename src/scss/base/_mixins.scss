@@ -13,5 +13,3 @@
 @mixin automatic-padding($minH, $maxH, $minW, $maxW) {
     padding: clamp(#{$minH}px, #{$maxH / 1920 * 100}vw, #{$maxH}px) clamp(#{$minW}px, #{$maxW / 1920 * 100}vw, #{$maxW}px);
 }
-
-

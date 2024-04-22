@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "../components/Button";
 import { Container } from "../components/Container";
-import { useNavigate } from "react-router-dom";
 
 interface IData {
     firstName: string,

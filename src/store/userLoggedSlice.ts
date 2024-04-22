@@ -8,7 +8,7 @@ type TypeInitial = {
 };
 
 const initialState: TypeInitial = {
-    user: {status: false, email: ''} 
+    user: { status: false, email: '' }
 }
 
 const userLoggedSlice = createSlice({
@@ -22,4 +22,4 @@ const userLoggedSlice = createSlice({
 });
 
 export default userLoggedSlice.reducer;
-export const {setUser} = userLoggedSlice.actions;
+export const { setUser } = userLoggedSlice.actions;

@@ -9,7 +9,6 @@ export const RoomSelection: FC = () => {
     const [numbersChildren, setNumbersChildren] = useState<number>(0);
     const { t } = useTranslation();
 
-
     type TypeNumbers = {
         num: boolean,
         old: boolean,

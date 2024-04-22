@@ -1,7 +1,7 @@
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import piople from '../assets/images/order/piople.png';
 import bed from '../assets/images/order/bed.png';
-import { useTranslation } from "react-i18next";
 
 export const Price: FC = () => {
     const { t } = useTranslation();

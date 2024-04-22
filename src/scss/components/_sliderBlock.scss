@@ -34,6 +34,7 @@
         }
     }
 }
+
 @include laptop {
     .slider-block {
         &__text {
@@ -43,9 +44,9 @@
 }
 
 @include table {
-    .slider-block{
-       height: inherit;
-  
+    .slider-block {
+        height: inherit;
+
         &__text {
             position: relative;
             padding: 16px;

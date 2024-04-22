@@ -1,20 +1,20 @@
 .registration {
     min-height: 90vh;
-    
+
     &__titles {
         display: flex;
         align-items: center;
         background-color: var(--background-title);
         height: 140px;
-      }
-  
-      &__title {
-          color: var(--color-primary);
-          font-family: var(--font-family-PTSans-reg-it);
-          @include fluid-size-text(24, 48);
-          line-height: 62px;
-          margin-left: 12vw;
-      }
+    }
+
+    &__title {
+        color: var(--color-primary);
+        font-family: var(--font-family-PTSans-reg-it);
+        @include fluid-size-text(24, 48);
+        line-height: 62px;
+        margin-left: 12vw;
+    }
 }
 
 .form {
@@ -37,16 +37,16 @@
     }
 
     &__block {
-       display: flex;
-       flex-direction: column;
-       margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
 
-       &_flex {
-         display: flex;
-         flex-direction: row;
-         justify-content: space-evenly;
-         margin-bottom: 14px;
-       }
+        &_flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-bottom: 14px;
+        }
     }
 
     &__label {
@@ -64,9 +64,9 @@
     }
 
     &__button {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
     }
 
     &__error {
@@ -95,4 +95,3 @@
         margin: 25px 10px 25px;
     }
 }
-

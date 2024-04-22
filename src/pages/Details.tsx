@@ -1,14 +1,14 @@
 import { FC } from "react";
-import { Container } from "../components/Container";
+import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Container } from "../components/Container";
 import { Button } from "../components/Button";
 import arrowLeft from "../assets/images/home/Arrow left.png";
-import { useNavigate } from "react-router-dom";
 
 const Details: FC = () => {
     const { state } = useLocation();
-    const {place, img} = state;
+    const { place, img } = state;
     const { t } = useTranslation();
     const navigate = useNavigate();
 
